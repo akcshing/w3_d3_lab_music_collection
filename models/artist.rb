@@ -56,6 +56,7 @@ class Artist
     sql = "SELECT * FROM artists WHERE id = $1"
     values = [id]
     result = Sql_Runner.run(sql,values)
+    # return nil if result.ntuples == 0   # guard to return nil so that an empty artist isnt created if id doesnt exist?
     return Artist.new(result[0])
   end
 

@@ -14,7 +14,7 @@ class Album
     sql = "SELECT * FROM artists WHERE id = $1"
     values = [@artist_id]
     results = Sql_Runner.run( sql,values )
-    return results.map{| artist | Artist.new(artist)}
+    return results.map{| artist | Artist.new(artist)}   # .first (pop out of array) if it's guarenteed single result ie you dont want an array as a result
   end
 
   def save

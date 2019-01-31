@@ -31,8 +31,8 @@ all_albums = Album.all()
 #   artist.delete()
 # end
 
-new_artist = Artist.find(29)
-new_album = Album.find(29)
+# new_artist = Artist.find(29)
+# new_album = Album.find(29)
 
 binding.pry
 nil
